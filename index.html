@@ -10,11 +10,13 @@
 <body>
    <div id="login-area" class="w-75 m-auto">
     <h1 class="text-center p-5">Welcome to Iching biching Bank</h1>
-    <div id="submit-area"></div>
+    <div id="submit-area" class="shadow p-3 mb-5 bg-white rounded ">
+    <h3>Login</h3>
     <input type="text" class="form-control input-item" placeholder="Enter email">
     <input type="password" class="form-control input-item" placeholder="Enter password">
     <button class="btn btn-primary input-item" id="login">login</button>
    </div>
+  </div>
 
 <div id="transection-area">
   <h1 class="text-center mt-2">Transection Area</h1>
@@ -29,6 +31,24 @@
       </div>
       <div class="col-md-4 balance-output" id="balance">
        <h1>width</h1>
+      </div>
+    </div>
+  </div>
+  <div class="blance-input">
+    <div class="container">
+      <div class="row">
+       <div class="col-md-6 shadow   bg-white rounded balance-input">
+         <h3>Deposite</h3>
+         <input type="number" class=" form-control input-amount" id="Deposite" placeholder="$ amount you want to deposite">
+         
+         <button class="btn btn-success" id="submit">Deposite</button>
+       </div>
+       <div class="col-md-6 shadow  bg-white rounded balance-input">
+         <h3>Withdraw</h3>
+        
+        <input type="number" class=" form-control input-amount" id="Withdraw" placeholder="$ amount you want to withdraw">
+        <button class="btn btn-success" id="submit">Withdraw</button>
+       </div>
       </div>
     </div>
   </div>
