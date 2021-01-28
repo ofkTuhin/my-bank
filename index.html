@@ -8,15 +8,31 @@
     <title>My bank</title>
 </head>
 <body>
-   <div id="login-area">
+   <div id="login-area" class="w-75 m-auto">
     <h1 class="text-center p-5">Welcome to Iching biching Bank</h1>
     <div id="submit-area"></div>
     <input type="text" class="form-control input-item" placeholder="Enter email">
     <input type="password" class="form-control input-item" placeholder="Enter password">
-    <button class="btn btn-primary input-item">login</button>
+    <button class="btn btn-primary input-item" id="login">login</button>
    </div>
 
-
+<div id="transection-area">
+  <h1 class="text-center mt-2">Transection Area</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm balance-output" id="deposite">
+      <h1>deposite</h1>
+       
+      </div>
+      <div class="col-sm balance-output" id="withdraw">
+      <h1>balance</h1>
+      </div>
+      <div class="col-sm balance-output" id="balance">
+       <h1>width</h1>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   var loginbtn=document.getElementById("login");

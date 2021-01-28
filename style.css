@@ -3,9 +3,31 @@ body{
 }
 #submit-area{
     margin: 0 auto;
-    padding: 100px 30px;
+     ;
 }
 .input-item{
-    padding: 20px 10px;
+    padding: 20px 10px !important;
     margin: 10px 0px;
+}
+#login{
+    padding: 20px 30px !important;
+}
+.balance-output{
+    border: 1px solid blue;
+   
+    text-transform: capitalize;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#balance{
+    background-color: rgb(177, 18, 18);
+}
+#withdraw{
+background-color: rgb(0, 4, 255);
+}
+#deposite{
+    background-color: rgb(228, 196, 15);
 }
