@@ -1,10 +1,11 @@
 body{
     padding: 100px;
 }
-.form{
-    margin: auto;
-    padding: 100px 30px !important;
+#submit-area{
+    margin: 0 auto;
+    padding: 100px 30px;
 }
 .input-item{
-    padding: 20px 10px !important;
+    padding: 20px 10px;
+    margin: 10px 0px;
 }
