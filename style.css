@@ -12,6 +12,9 @@ body{
 #login{
     padding: 20px 30px !important;
 }
+#transection-area{
+    display: none;
+}
 .balance-output{
     border: 1px solid blue;
    
