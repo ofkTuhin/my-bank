@@ -14,18 +14,26 @@
     <div class="mb-3 row">
        
         <div class="col-sm-10 w-100 m-auto">
-          <input type="text" class="form-control" id="staticEmail" placeholder="email">
+          <input type="text" class="form-control input-item" id="staticEmail" placeholder="email">
         </div>
       </div>
       <div class="mb-3 row">
       
         <div class="col-sm-10 w-100 m-auto">
-          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+          <input type="password" class="form-control input-item" id="inputPassword" placeholder="Password">
         </div>
       </div>
       <div class="col-12 m-auto w-100">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" id="login" class="btn btn-primary">Sign in</button>
       </div>
 </form>
+
+
+
+<script>
+  document.getElementById('login').addEventListener('click',function(){
+    console.log('click me');
+  })
+</script>
 </body>
 </html>
