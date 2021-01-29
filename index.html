@@ -80,24 +80,11 @@ document.getElementById('login').addEventListener('click',function(){
   const depositeAdd=depositBtn.addEventListener('click',function(){
 
     //deposite
-    const depositeAmount=document.getElementById('depositeAdd').value;
-    const depositeNumber=parseFloat(depositeAmount)
-    const currentDeposite=document.getElementById('currentDeposite').innerText
-    const currentDepositeNumber=parseFloat(currentDeposite);
- 
-   const depositeBalance=currentDepositeNumber+depositeNumber;
- 
-   document.getElementById('currentDeposite').innerText=depositeBalance;  
+    const depositeAmount=getInputNumber('dipositeAdd');
 
-   //balance add
-   const balanceAmount=document.getElementById('depositeAdd').value;
-    const balanceNumber=parseFloat(balanceAmount)
-    const currentBalance=document.getElementById('currentBalance').innerText
-    const currentBalanceNumber=parseFloat(currentBalance);
- 
-   const totalBalance=currentBalanceNumber+balanceNumber;
- 
-   document.getElementById('currentBalance').innerText=totalBalance; 
+    updateSpanText('currentDeposite',depositeAmount)
+    updateSpanText('currentBalance',depositeAmount)
+
    document.getElementById('depositeAdd').value=''
   })
 
@@ -131,7 +118,23 @@ document.getElementById('login').addEventListener('click',function(){
   })
 
 })
+
+function getInputNumber(id){
+  const inputAmount =document.getElementById(id).value;
+  const amount=parseFloat(inputAmount);
+  return amount;
+}
+
+
   
+function updateSpanText(id,addNumber)
+{
+  const currentAmount= document.getElementById(id).innerText
+  const amountNumber=parseFloat(currentAmount);
+  const totalBalance=addNumber+amountNumber;
+  document.getElementById(id).innerText=totalBalance;
+
+}
 
 
 
