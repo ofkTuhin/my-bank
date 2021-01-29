@@ -26,7 +26,7 @@
       
         <div class="balance-output" id="deposite">
          <h1>Deposite</h1>
-         <h1>$<span id="currentBalance">00</span></h1>
+         <h1>$<span id="currentDeposite">33</span></h1>
         </div>
          </div>
       <div class="col-md-4" >
@@ -40,7 +40,7 @@
       
         <div class="balance-output" id="balance">
          <h1>Balance</h1>
-         <h1>$00</h1>
+         <h1>$<span id="currentBalance">00</span></h1>
         </div>
          </div>
     </div>
@@ -72,13 +72,20 @@
   loginbtn.addEventListener("click", function(){
    document.getElementById("login-area").style.display='none';
   })
-
+//deposite button
 document.getElementById('login').addEventListener('click',function(){
   document.getElementById('transection-area').style.display='block';
 
   const depositBtn=document.getElementById('depositBtn');
   const depositeAdd=depositBtn.addEventListener('click',function(){
-    console.log('click')
+    const depositeAmount=document.getElementById('depositeAdd').value;
+    const depositeNumber=parseFloat(depositeAmount)
+    const currentDeposite=document.getElementById('currentDeposite').innerText
+    const currentDepositeNumber=parseFloat(currentDeposite);
+ 
+   const depositeBalance=currentDepositeNumber+depositeNumber;
+ 
+   document.getElementById('currentDeposite').innerText=depositeBalance;  
   })
 })
   
