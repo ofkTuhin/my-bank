@@ -26,7 +26,7 @@
       
         <div class="balance-output" id="deposite">
          <h1>Deposite</h1>
-         <h1>$<span id="currentDeposite">33</span></h1>
+         <h1>$<span id="currentDeposite">00</span></h1>
         </div>
          </div>
       <div class="col-md-4" >
@@ -78,6 +78,8 @@ document.getElementById('login').addEventListener('click',function(){
 
   const depositBtn=document.getElementById('depositBtn');
   const depositeAdd=depositBtn.addEventListener('click',function(){
+
+    //deposite
     const depositeAmount=document.getElementById('depositeAdd').value;
     const depositeNumber=parseFloat(depositeAmount)
     const currentDeposite=document.getElementById('currentDeposite').innerText
@@ -86,6 +88,21 @@ document.getElementById('login').addEventListener('click',function(){
    const depositeBalance=currentDepositeNumber+depositeNumber;
  
    document.getElementById('currentDeposite').innerText=depositeBalance;  
+
+   //balance add
+   const balanceAmount=document.getElementById('depositeAdd').value;
+    const balanceNumber=parseFloat(balanceAmount)
+    const currentBalance=document.getElementById('currentBalance').innerText
+    const currentBalanceNumber=parseFloat(currentBalance);
+ 
+   const totalBalance=currentBalanceNumber+balanceNumber;
+ 
+   document.getElementById('currentBalance').innerText=totalBalance; 
+
+
+   
+
+   document.getElementById('depositeAdd').value=''
   })
 })
   
