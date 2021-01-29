@@ -40,7 +40,7 @@
       
         <div class="balance-output" id="balance">
          <h1>Balance</h1>
-         <h1>$<span id="currentBalance">00</span></h1>
+         <h1>$<span id="currentBalance">23454</span></h1>
         </div>
          </div>
     </div>
@@ -104,6 +104,36 @@ document.getElementById('login').addEventListener('click',function(){
 
    document.getElementById('depositeAdd').value=''
   })
+
+  //withdraw
+
+  const withdrawBtn=document.getElementById('withdrawBtn')
+  const withdrawAdd=withdrawBtn.addEventListener('click', function(){
+    const withdrawAmount=document.getElementById('withdrawAdd').value
+    const withdrawAmountNumber=parseFloat(withdrawAmount)
+
+    const currentWithdraw=document.getElementById('currentWithdraw').innerText
+    const currentWithdrawNumber=parseFloat(currentWithdraw)
+    const totalWithdraw=withdrawAmountNumber+currentWithdrawNumber;
+    document.getElementById('currentWithdraw').innerText=totalWithdraw;
+
+    //current balabce
+
+    const currentBalance=document.getElementById('currentBalance').innerText
+    const currentBalanceNumber=parseFloat(currentBalance);
+
+    const rmainingBalance=currentBalanceNumber-totalWithdraw;
+
+    document.getElementById('currentBalance').innerText=rmainingBalance;
+
+
+
+
+    document.getElementById('withdrawAdd').value="";
+
+    
+  })
+
 })
   
 
